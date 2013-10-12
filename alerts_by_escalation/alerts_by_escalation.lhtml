@@ -1,0 +1,28 @@
+{% if alerts == empty %}
+  <div style="text-align:center;padding:20px">-no matching alerts-</div>
+{% else %}
+  {% counter critical = 0 %}
+  {% counter warning = 0 %}
+  {% counter default = 0 %}
+  {% counter unknown = 0 %}
+  {% assign my_table_contents = "" %}
+  {% for a in alerts %}
+      {% if a.escalation == "critical" %}
+        {% increment critical %}
+      {% elsif a.escalation == "warning" %}
+        {% increment warning %}
+      {% elsif a.escalation == "default" %}
+        {% increment default %}
+      {% else %}
+        {% increment unknown %}
+      {% endif %}
+  {% endfor %}
+  <div style="text-align:center">
+  {% if config.graph_type == "pie" %}
+    <img src="{% pie_chart "Current Alert Escalations", "Critical", critical, "Warning", warning, "Default", default, "Unknown", unknown %}"/>
+  {% endif %}
+  {% if config.graph_type == "bar" %}
+    <img src="{% bar_chart "Current Alert Escalations", "Critical", critical, "Warning", warning, "Default", default, "Unknown", unknown %}"/>
+  {% endif %}
+  </div>
+{% endif %}

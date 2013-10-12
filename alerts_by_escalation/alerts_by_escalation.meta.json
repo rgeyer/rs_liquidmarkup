@@ -1,0 +1,11 @@
+{
+  "filters": [ "None", "Server", "Name", "Deployment" ],
+  "inputs": [
+    {
+      "name": "graph_type",
+      "type": "dropdown",
+      "description": "",
+      "options": ["bar","pie"]
+    }
+  ]
+}

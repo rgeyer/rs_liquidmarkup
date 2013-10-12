@@ -1,0 +1,10 @@
+{
+  "inputs": [
+    {
+      "name": "uri",
+      "type": "text",
+      "description": "The URL to iFrame into RightScale",
+      "default_value": "https://analytics.rightscale.com"
+    }
+  ]
+}

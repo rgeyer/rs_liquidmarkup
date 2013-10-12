@@ -1,0 +1,6 @@
+<a href="{{config.uri}}" target="_blank"><button>Fullscreen</button></a>
+{% if config.current_view == "expanded" %}
+<iframe src="{{config.uri}}" height="650px" width="100%"></iframe>
+{% else %}
+<iframe src="{{config.uri}}" height="400px" width="100%"></iframe>
+{% endif %}

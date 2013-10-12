@@ -1,0 +1,3 @@
+<center>
+<img src="{{config.url}}" width="{{config.width}}"/>
+</center>

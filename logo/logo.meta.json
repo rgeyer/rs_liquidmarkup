@@ -1,0 +1,16 @@
+{
+  "inputs": [
+    {
+      "name": "url",
+      "type": "text",
+      "description": "URL of Logo",
+      "default_value": ""
+    },
+    {
+      "name": "width",
+      "type": "text",
+      "description": "width",
+      "default_value": "500"
+    }
+  ]
+}
